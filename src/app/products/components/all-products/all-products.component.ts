@@ -15,7 +15,7 @@ export class AllProductsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProducts();
-    this.getCategories
+    this.getCategories();
   }
 
   getProducts(){
