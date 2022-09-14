@@ -6,7 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {path: "products", component:AllProductsComponent},
-  {path:"details", component:ProductsDetailsComponent},
+  {path:'product/:id', component:ProductsDetailsComponent},
   {path:"cart", component:CartsComponent},
   {path: "**", redirectTo:"products", pathMatch:"full"}
 
@@ -17,3 +17,6 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
+export const routingComponents = [AllProductsComponent, ProductsDetailsComponent, CartsComponent]

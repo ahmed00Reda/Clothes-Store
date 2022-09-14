@@ -16,7 +16,9 @@ import { ProductComponent } from './components/all-products/product/product.comp
     CommonModule
   ],
   exports: [
-    AllProductsComponent
+    AllProductsComponent,
+    ProductsDetailsComponent,
+    ProductComponent
   ]
 })
 export class ProductsModule { }

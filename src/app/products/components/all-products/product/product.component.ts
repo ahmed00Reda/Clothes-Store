@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -9,11 +10,18 @@ export class ProductComponent implements OnInit {
 
   @Input() item: any
 
-  constructor() { }
+  constructor(private router:Router) {
 
-  ngOnInit(): void {
   }
 
+  ngOnInit(): void {
+
+  }
+
+  ayHaga(id:number){
+
+    this.router.navigate(['/product', id])
+  }
 
 
 }
