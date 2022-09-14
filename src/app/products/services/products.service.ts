@@ -16,4 +16,11 @@ export class ProductsService {
   getAllCategories(){
     return this.http.get("https://fakestoreapi.com/products/categories")
   }
+
+  getProductById(id:any){
+    return this.http.get('https://fakestoreapi.com/products/' + id)
+  }
+
+
+
 }

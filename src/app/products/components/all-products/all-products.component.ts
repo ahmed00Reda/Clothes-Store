@@ -10,6 +10,7 @@ export class AllProductsComponent implements OnInit {
 
   products:any[] = []
   categories:any = []
+  cartProducts:any [] = []
 
   constructor(private service:ProductsService) { }
 
@@ -34,4 +35,16 @@ export class AllProductsComponent implements OnInit {
     })
   }
 
+  addToCart(event:any){
+    if("cart" in localStorage){
+      this.cartProducts = JSON.parse(localStorage.getItem("cart")!)
+      this.cartProducts.push(event)
+      localStorage.setItem("cart", JSON.stringify(this.cartProducts))
+    }else {
+      this.cartProducts.push(event)
+      localStorage.setItem("cart", JSON.stringify(this.cartProducts))
+    }
+
+ }
+ 
 }

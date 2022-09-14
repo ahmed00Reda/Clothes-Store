@@ -18,7 +18,9 @@ import { ProductRoutingModule } from './product-routing.module';
     CommonModule
   ],
   exports: [
-    AllProductsComponent
+    AllProductsComponent,
+    ProductsDetailsComponent,
+    ProductComponent
   ]
 })
 export class ProductModule { }
