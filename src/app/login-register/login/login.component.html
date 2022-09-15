@@ -1,0 +1,18 @@
+<div class="container">
+  <form formGroup="loginForm" (ngSubmit)="onSubmit()">
+    <h2 style="text-align: center;">LOGIN FORM</h2>
+    <div class="form-group">
+        <label for="name">username</label>
+        <input  id="name" type="text" class="form-control" formControlName="username">
+    </div>
+
+    <div class="from-group">
+        <label for="name">password</label>
+        <input id="password" type="text" class="form-control" formControlName="password" maxlength="8">
+    </div>
+    <button type="submit" class=" btn btn-primary my-2 " >login</button>
+     <button type="button" class="btn btn-info mx-5" [routerLink]="['/register']">REGISTER </button>
+  </form>
+  <h1>{{result}}</h1>
+
+</div>
