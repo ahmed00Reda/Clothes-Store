@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { AllProductsComponent } from './components/all-products/all-products.component';
 import { ProductsDetailsComponent } from './components/products-details/products-details.component';
 import { ProductComponent } from './components/all-products/product/product.component';
+import { ProductRoutingModule } from './product-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -10,10 +12,13 @@ import { ProductComponent } from './components/all-products/product/product.comp
   declarations: [
     AllProductsComponent,
     ProductsDetailsComponent,
-    ProductComponent
+    ProductComponent,
+
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     AllProductsComponent,
@@ -21,4 +26,4 @@ import { ProductComponent } from './components/all-products/product/product.comp
     ProductComponent
   ]
 })
-export class ProductsModule { }
+export class ProductModule { }
